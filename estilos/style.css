@@ -21,11 +21,21 @@
   --fundo-card: #ffffff;
 }
 
+body.escuro {
+  --fundo-principal: #121212;
+  --texto: #e0e0e0;
+  --texto-inverso: #121212;
+  --destaque: #1e88e5;
+  --destaque-inverso: #90caf9;
+  --fundo-card: #1e1e1e;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -254,7 +264,6 @@ article h2 {
 
 
 
-
   @media screen  and (min-width: 768px) {
     main {
       grid-template-columns: auto 300px 1fr auto;
@@ -269,11 +278,7 @@ article h2 {
 
     section#detalhes {
       grid-column: 3 /4 ;
-
     }
-
-
-
 
     #skill-container {
       grid-template-columns: 1fr 1fr;
